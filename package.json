@@ -1,0 +1,18 @@
+{
+  "name": "babylon-test",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "serve": "vite --host 0.0.0.0",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@types/earcut": "^2.1.1",
+    "vite": "^2.6.4"
+  },
+  "dependencies": {
+    "@babylonjs/core": "5.0.0-alpha.57",
+    "axios": "^0.24.0",
+    "earcut": "^2.2.3"
+  }
+}
