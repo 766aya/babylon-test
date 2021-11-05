@@ -1,12 +1,23 @@
-import { Animation, ArcRotateCamera, HemisphericLight, MeshBuilder, SceneLoader, StandardMaterial, Texture, Vector3 } from "@babylonjs/core"
-import { conversionColorHex } from "/src/util/conversionColor.js"
+import {
+  Animation,
+  ArcRotateCamera,
+  HemisphericLight,
+  MeshBuilder,
+  SceneLoader,
+  StandardMaterial,
+  Texture,
+  Vector3
+} from "@babylonjs/core"
+import {
+  conversionColorHex
+} from "/src/util/conversionColor.js"
 
-export default function (engine, scene) {
+export default function(engine, scene) {
   new CharacterAnimation(engine, scene)
 }
 
 class CharacterAnimation {
-  constructor (engine, scene) {
+  constructor(engine, scene) {
     this.engine = engine
     this.scene = scene
     this.createCamera()
@@ -16,7 +27,7 @@ class CharacterAnimation {
     this.startGroundAnimation()
   }
 
-  createCamera () {
+  createCamera() {
     this.camera = new ArcRotateCamera('camera', -Math.PI / 2, Math.PI / 2, 10, Vector3.Zero(), this.scene)
     this.camera.setPosition(new Vector3(0, 70, 0))
     this.camera.attachControl(true)
@@ -28,11 +39,11 @@ class CharacterAnimation {
     this.camera.upperRadiusLimit = 65;
   }
 
-  createLight () {
+  createLight() {
     this.light = new HemisphericLight('light', new Vector3(0, 10, 10), this.scene)
   }
 
-  createGround () {
+  createGround() {
     const groundMaterial = new StandardMaterial('groundMaterial', this.scene)
     groundMaterial.diffuseTexture = new Texture('/texture/houseRoof1.jpg')
     groundMaterial.reflectionTexture = new Texture("/texture/floor/dark_old_wood_tiles_1_reflection.png")
@@ -47,15 +58,15 @@ class CharacterAnimation {
     this.ground.material = groundMaterial
   }
 
-  createCharacterAnimation () {
+  createCharacterAnimation() {
     SceneLoader.ImportMeshAsync("him", "/model/dude/", "Dude.babylon", this.scene).then((result) => {
       var dude = result.meshes[0];
       dude.scaling = new Vector3(0.25, 0.25, 0.25);
-      this.scene.beginAnimation(result.skeletons[0], 0, 100, true, 2.0);
+      this.scene.beginAnimation(result.skeletons[0], 0, 200, true, 2.0);
     });
   }
 
-  startGroundAnimation () {
+  startGroundAnimation() {
     const groundAnimation = new Animation('groundAnimation', 'position.z', 30, Animation.ANIMATIONTYPE_FLOAT, Animation.ANIMATIONLOOPMODE_CYCLE)
     const keys = []
     keys.push({
