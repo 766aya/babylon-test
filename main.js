@@ -1,11 +1,15 @@
 import './style.css'
 import * as earcut from "earcut";
 import {
-  Scene
-} from '@babylonjs/core/scene';
+  Scene,
+  Engine,
+  SceneLoader
+} from '@babylonjs/core';
 import {
-  Engine
-} from '@babylonjs/core/Engines/engine';
+  OBJFileLoader,
+  STLFileLoader,
+} from '@babylonjs/loaders';
+
 // import init from "./src/page/01 Getting Started"
 // import init from "./src/page/02 First Playground"
 // import init from "./src/page/03 Adding Sound"
@@ -18,15 +22,21 @@ import {
 // import init from "./src/page/10 LinesTest"
 // import init from "./src/page/11 Sprite Trees"
 // import init from "./src/page/12 Lathe Turned Fountain"
-import init from "./src/page/13 Particle Spray"
+// import init from "./src/page/13 Particle Spray"
+// import init from "./src/page/14 Street Lights"
+// import init from "./src/page/15 Day to Night"
+import init from "./src/page/16 Have a Look Around"
 
 window.earcut = earcut
+
+new SceneLoader.RegisterPlugin(new OBJFileLoader())
+
 window.addEventListener('DOMContentLoaded', function() {
   const canvas = document.getElementById('renderCanvas');
   const engine = new Engine(canvas, true)
   const scene = new Scene(engine, {})
 
-  init(engine, scene)
+  new init(engine, scene)
 
   engine.runRenderLoop(function() {
     scene.render()

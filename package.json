@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "serve": "vite --host 0.0.0.0",
+    "serve": "vite --host 127.0.0.1",
     "build": "vite build"
   },
   "devDependencies": {
@@ -11,7 +11,9 @@
     "vite": "^2.6.4"
   },
   "dependencies": {
-    "@babylonjs/core": "5.0.0-alpha.57",
+    "@babylonjs/core": "5.0.0-alpha.60",
+    "@babylonjs/gui": "5.0.0-alpha.60",
+    "@babylonjs/loaders": "5.0.0-alpha.60",
     "axios": "^0.24.0",
     "earcut": "^2.2.3"
   }

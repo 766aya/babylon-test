@@ -23,7 +23,7 @@ class LatheTurnedFountain {
     this.scene = scene
     this.createCamera()
     this.createLight()
-    this.createGround()
+    // this.createGround()
     this.createFountain()
     this.initParticleSystem()
   }

@@ -2,11 +2,28 @@
 # yarn lockfile v1
 
 
-"@babylonjs/core@5.0.0-alpha.57":
-  version "5.0.0-alpha.57"
-  resolved "https://registry.yarnpkg.com/@babylonjs/core/-/core-5.0.0-alpha.57.tgz#8a47c9ec4b1f111f9a5242ff925ea04ecad639c9"
-  integrity sha512-v2uu7k4uw9JpulVG6q50rdaQ4azlbrwqaePtCygx3et5skHrYrQXZyUNnxJVJSNAxaV9vAWRHTLsgd74ENKLKg==
+"@babylonjs/core@5.0.0-alpha.60":
+  version "5.0.0-alpha.60"
+  resolved "https://registry.npmjs.org/@babylonjs/core/-/core-5.0.0-alpha.60.tgz#1bf5d78c316455b386c829bd59ba14da63ad0d94"
+  integrity sha512-2DM4BFWcRTdgdVZqUzc8IUf9EdcfZN+aeYvWU4bzmutX6l8wowjjlQnqwCFfv+GHouV6XkM3QqoQV2rqc9T1Kw==
   dependencies:
+    tslib "^2.3.1"
+
+"@babylonjs/gui@5.0.0-alpha.60":
+  version "5.0.0-alpha.60"
+  resolved "https://registry.npmjs.org/@babylonjs/gui/-/gui-5.0.0-alpha.60.tgz#508a09e63b7aeaffd770df3faa15b825f92db586"
+  integrity sha512-bMQsu8jDfmDYfigv4/VRuW49MaEyHDWM6HOvj9UYVq7NuAPGFgLUzLC7pQXMe1bsWVSCd8e9PWmdt+jX0sBxxg==
+  dependencies:
+    "@babylonjs/core" "5.0.0-alpha.60"
+    tslib "^2.3.1"
+
+"@babylonjs/loaders@5.0.0-alpha.60":
+  version "5.0.0-alpha.60"
+  resolved "https://registry.npmjs.org/@babylonjs/loaders/-/loaders-5.0.0-alpha.60.tgz#defe9a7fb8f0c21efa94adc5b9f56f0714289822"
+  integrity sha512-uJ+ORjGTIPxrvFWms2blDYNI49xgkg73CebPNztfxXWidPktQ+e9TkpuaFKxBIuk1nLPbxWa3I862tP/1rPimA==
+  dependencies:
+    "@babylonjs/core" "5.0.0-alpha.60"
+    babylonjs-gltf2interface "5.0.0-alpha.60"
     tslib "^2.3.1"
 
 "@types/earcut@^2.1.1":
@@ -20,6 +37,11 @@ axios@^0.24.0:
   integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
   dependencies:
     follow-redirects "^1.14.4"
+
+babylonjs-gltf2interface@5.0.0-alpha.60:
+  version "5.0.0-alpha.60"
+  resolved "https://registry.npmjs.org/babylonjs-gltf2interface/-/babylonjs-gltf2interface-5.0.0-alpha.60.tgz#7c6155c0f2a23cdcdc83c72aaee72fa2bb8a68bf"
+  integrity sha512-J1+dZarDEi+Gd+k8atJd69HbYZsAfLpmEm28w+SBhFmO6T5h7tCwEjFqDjGomzNXGGtpXACuJzAm23uavsXPgw==
 
 earcut@^2.2.3:
   version "2.2.3"
